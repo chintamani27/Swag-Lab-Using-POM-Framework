@@ -6,180 +6,63 @@ import org.testng.annotations.Test;
 
 import bases.SetupBases;
 import pages.SwagLabPages;
+import utils.DataProviders;
 
 
 public class SwagLabTest extends SetupBases {
 	
 	SwagLabPages p ;
 	
+
+//    @Test(dataProvider = "loginData",
+//          dataProviderClass = DataProviders.class)
+//    public void loginTest(
+//            String username,
+//            String password,
+//            String productName) {
+//    	p =  new SwagLabPages(d);
+//		
+//		//username = standard_user password = secret_sauce
+//		p.enterUsername(username);
+//		p.enterPassword(password);
+//		p.clickLogin();
+//		
+//		String url = d.getCurrentUrl();
+//		
+//		if(url.contains("https://www.saucedemo.com/inventory.html")) {
+//			
+//			System.out.println("Login Success !!");
+//			p.selectProduct(productName);
+//			//p.addToCart();
+//		}
+//		
+//		
+//		else{
+//			WebElement error = d.findElement(By.xpath("//div/h3"));
+//			System.out.println("Login Failed: "+error.getText());
+//			
+//		}
+//		
+//
+//		
+//    }
+	
 	@Test
-	public void verifyLogin_1() {
-		p =  new SwagLabPages(d);
-		
-		//username = standard_user password = secret_sauce
+	public void loginTest() {
+		p = new SwagLabPages(d);
 		p.enterUsername("standard_user");
 		p.enterPassword("secret_sauce");
 		p.clickLogin();
-		
-		String url = d.getCurrentUrl();
-		
-		if(url.contains("https://www.saucedemo.com/inventory.html")) {
-			
-			System.out.println("Login Success !!");
-		}
-		
-		
-		else{
-			WebElement error = d.findElement(By.xpath("//div/h3"));
-			System.out.println("Login Failed: "+error.getText());
-			
-		}
-		
-		
-		
-		
+		p.selectProduct();
+		p.addToCart();
+		p.goToCart();
+		p.checkout();
+		p.enterInfo();
+		p.continueOrder();
+		p.completeOrder();
+		p.generateReceipt();
 	}
-	
-	@Test
-	public void verifyLogin_2() {
-		p =  new SwagLabPages(d);
-		
-		//username = standard_user password = secret_sauce
-		p.enterUsername("locked_out_user");
-		p.enterPassword("secret_sauce");
-		p.clickLogin();
-		
-		String url = d.getCurrentUrl();
-		
-		if(url.contains("https://www.saucedemo.com/inventory.html")) {
-			
-			System.out.println("Login Success !!");
-		}
-		
-		
-		else{
-			WebElement error = d.findElement(By.xpath("//div/h3"));
-			System.out.println("Login Failed: "+error.getText());
-			
-		}
-		
-		
-		
-		
-	}
-	
-	@Test
-	public void verifyLogin_3() {
-		p =  new SwagLabPages(d);
-		
-		//username = standard_user password = secret_sauce
-		p.enterUsername("problem_user");
-		p.enterPassword("secret_sauce");
-		p.clickLogin();
-		
-		String url = d.getCurrentUrl();
-		
-		if(url.contains("https://www.saucedemo.com/inventory.html")) {
-			
-			System.out.println("Login Success !!");
-		}
-		
-		
-		else{
-			WebElement error = d.findElement(By.xpath("//div/h3"));
-			System.out.println("Login Failed: "+error.getText());
-			
-		}
-		
-		
-		
-		
-	}
-	
-	@Test
-	public void verifyLogin_4() {
-		p =  new SwagLabPages(d);
-		
-		//username = standard_user password = secret_sauce
-		p.enterUsername("performance_glitch_user");
-		p.enterPassword("secret_sauce");
-		p.clickLogin();
-		
-		String url = d.getCurrentUrl();
-		
-		if(url.contains("https://www.saucedemo.com/inventory.html")) {
-			
-			System.out.println("Login Success !!");
-		}
-		
-		
-		else{
-			WebElement error = d.findElement(By.xpath("//div/h3"));
-			System.out.println("Login Failed: "+error.getText());
-			
-		}
-		
-		
-		
-		
-	}
-	
-	@Test
-	public void verifyLogin_5() {
-		p =  new SwagLabPages(d);
-		
-		//username = standard_user password = secret_sauce
-		p.enterUsername("error_user");
-		p.enterPassword("secret_sauce");
-		p.clickLogin();
-		
-		String url = d.getCurrentUrl();
-		
-		if(url.contains("https://www.saucedemo.com/inventory.html")) {
-			
-			System.out.println("Login Success !!");
-		}
-		
-		
-		else{
-			WebElement error = d.findElement(By.xpath("//div/h3"));
-			System.out.println("Login Failed: "+error.getText());
-			
-		}
-		
-		
-		
-		
-	}
-	
-	@Test
-	public void verifyLogin_6() {
-		p =  new SwagLabPages(d);
-		
-		//username = standard_user password = secret_sauce
-		p.enterUsername("visual_user");
-		p.enterPassword("secret_sauce");
-		p.clickLogin();
-		
-		String url = d.getCurrentUrl();
-		
-		if(url.contains("https://www.saucedemo.com/inventory.html")) {
-			
-			System.out.println("Login Success !!");
-		}
-		
-		
-		else{
-			WebElement error = d.findElement(By.xpath("//div/h3"));
-			System.out.println("Login Failed: "+error.getText());
-			
-		}
-		
-		
-		
-		
-	}
-	
+
 	
 
 }

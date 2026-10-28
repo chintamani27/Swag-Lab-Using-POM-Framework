@@ -6,8 +6,7 @@
       <class name="tests.SwagLabTest">
         <methods>
           <include name="launchWebSite"/>
-          <include name="closeWebsite"/>
-          <include name="verifyLogin"/>
+          <include name="loginTest"/>
         </methods>
       </class> <!-- tests.SwagLabTest -->
     </classes>
