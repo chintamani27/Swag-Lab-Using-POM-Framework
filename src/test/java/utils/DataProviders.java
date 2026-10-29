@@ -7,14 +7,16 @@ public class DataProviders {
 	    public Object[][] getLoginData() {
 
 	        return new Object[][] {
-	            {"standard_user", "secret_sauce","Sauce Labs Backpack"},
-	            {"locked_out_user", "secret_sauce","Sauce Labs Backpack"},
-	            {"problem_user", "secret_sauce","Sauce Labs Backpack"},
-	            {"performance_glitch_user", "secret_sauce","Sauce Labs Backpack"},
-	            {"error_user", "secret_sauce","Sauce Labs Backpack"},
-	            {"visual_user", "secret_sauce","Sauce Labs Backpack"}
+	            {"standard_user", "secret_sauce"},
+	            {"locked_out_user", "secret_sauce"},
+	            {"problem_user", "secret_sauce"},
+	            {"performance_glitch_user", "secret_sauce"},
+	            {"error_user", "secret_sauce"},
+	            {"visual_user", "secret_sauce"}
 	        };
 	   }
+	    
+	    
 	
 
 }
