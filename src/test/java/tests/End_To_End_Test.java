@@ -37,6 +37,6 @@ public class End_To_End_Test extends SetupBases {
 		p4.continueOrder();
 		p4.completeOrder();
 		p4.generateReceipt();
-		
+		p1.logOut();
 	}
 }
